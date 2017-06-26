@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D40E7E7D9B928E1731A7995 /* Pods_HitchHiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA68243E9D23A54B85F2FC6 /* Pods_HitchHiker.framework */; };
 		913D4EF61F0094AB00A78FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D4EF51F0094AB00A78FDA /* AppDelegate.swift */; };
-		913D4EF81F0094AB00A78FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D4EF71F0094AB00A78FDA /* ViewController.swift */; };
+		913D4EF81F0094AB00A78FDA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D4EF71F0094AB00A78FDA /* HomeVC.swift */; };
 		913D4EFB1F0094AB00A78FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EF91F0094AB00A78FDA /* Main.storyboard */; };
 		913D4EFD1F0094AB00A78FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EFC1F0094AB00A78FDA /* Assets.xcassets */; };
 		913D4F001F0094AB00A78FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EFE1F0094AB00A78FDA /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		91C7F4031F0173EB00F3C53C /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4021F0173EB00F3C53C /* RoundedShadowView.swift */; };
 		91C7F4051F0174EE00F3C53C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4041F0174EE00F3C53C /* CircleView.swift */; };
 		91C7F4071F019FEE00F3C53C /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4061F019FEE00F3C53C /* RoundedShadowButton.swift */; };
+		91C7F4091F01A8F500F3C53C /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4081F01A8F500F3C53C /* MenuVC.swift */; };
+		91C7F40B1F01A97500F3C53C /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F40A1F01A97500F3C53C /* ContainerVC.swift */; };
+		91C7F40E1F01AC0F00F3C53C /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F40D1F01AC0F00F3C53C /* CenterVCDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,7 @@
 		3E7B4F8DFA9D8155B7E0C0AC /* Pods-HitchHiker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitchHiker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HitchHiker/Pods-HitchHiker.debug.xcconfig"; sourceTree = "<group>"; };
 		913D4EF21F0094AA00A78FDA /* HitchHiker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHiker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D4EF51F0094AB00A78FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		913D4EF71F0094AB00A78FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		913D4EF71F0094AB00A78FDA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		913D4EFA1F0094AB00A78FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		913D4EFC1F0094AB00A78FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913D4EFF1F0094AB00A78FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		91C7F4021F0173EB00F3C53C /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		91C7F4041F0174EE00F3C53C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		91C7F4061F019FEE00F3C53C /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		91C7F4081F01A8F500F3C53C /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		91C7F40A1F01A97500F3C53C /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		91C7F40D1F01AC0F00F3C53C /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		913D4EF41F0094AA00A78FDA /* HitchHiker */ = {
 			isa = PBXGroup;
 			children = (
+				91C7F40C1F01AC0300F3C53C /* Protocols */,
 				91C7F3FD1F016DA900F3C53C /* Model */,
 				91C7F3FC1F016DA500F3C53C /* View */,
 				91C7F3FB1F016D9E00F3C53C /* Controller */,
@@ -96,7 +103,9 @@
 		91C7F3FB1F016D9E00F3C53C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				913D4EF71F0094AB00A78FDA /* ViewController.swift */,
+				913D4EF71F0094AB00A78FDA /* HomeVC.swift */,
+				91C7F4081F01A8F500F3C53C /* MenuVC.swift */,
+				91C7F40A1F01A97500F3C53C /* ContainerVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -120,6 +129,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		91C7F40C1F01AC0300F3C53C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				91C7F40D1F01AC0F00F3C53C /* CenterVCDelegate.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		EF17B6B5F742828FFFF9A0A2 /* Pods */ = {
@@ -260,11 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C7F40E1F01AC0F00F3C53C /* CenterVCDelegate.swift in Sources */,
 				91C7F4071F019FEE00F3C53C /* RoundedShadowButton.swift in Sources */,
 				91C7F4051F0174EE00F3C53C /* CircleView.swift in Sources */,
-				913D4EF81F0094AB00A78FDA /* ViewController.swift in Sources */,
+				913D4EF81F0094AB00A78FDA /* HomeVC.swift in Sources */,
+				91C7F40B1F01A97500F3C53C /* ContainerVC.swift in Sources */,
 				91C7F4011F01729600F3C53C /* RoundImageView.swift in Sources */,
 				91C7F4031F0173EB00F3C53C /* RoundedShadowView.swift in Sources */,
+				91C7F4091F01A8F500F3C53C /* MenuVC.swift in Sources */,
 				913D4EF61F0094AB00A78FDA /* AppDelegate.swift in Sources */,
 				91C7F3FF1F016DC800F3C53C /* GradientView.swift in Sources */,
 			);
