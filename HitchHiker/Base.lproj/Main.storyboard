@@ -25,10 +25,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-xl-tmA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4U-7v-85f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4U-7v-85f" customClass="GradientView" customModule="HitchHiker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="425" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="oXq-aG-dTK"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tGt-Bs-5nL">
                                 <rect key="frame" x="16" y="45" width="343" height="30"/>
@@ -54,28 +55,48 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Yo-Ivg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-photo" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Yo-Ivg" customClass="RoundImageView" customModule="HitchHiker" customModuleProvider="target">
                                         <rect key="frame" x="313" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="T86-6g-z9m"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wfy-ot-PLC"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Rw-4r8">
-                                <rect key="frame" x="16" y="587" width="343" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-4n-G9H">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-Rw-4r8" customClass="RoundedShadowButton" customModule="HitchHiker" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="GTm-BK-2PX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                                        <state key="normal" title="REQUEST RIDE">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTp-Dm-DtO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="GTm-BK-2PX"/>
+                                    <constraint firstItem="K0X-Rw-4r8" firstAttribute="top" secondItem="hNG-4n-G9H" secondAttribute="top" id="Aad-BR-Gl3"/>
+                                    <constraint firstItem="K0X-Rw-4r8" firstAttribute="leading" secondItem="hNG-4n-G9H" secondAttribute="leading" constant="20" id="MWp-JV-TyW"/>
+                                    <constraint firstAttribute="trailing" secondItem="K0X-Rw-4r8" secondAttribute="trailing" constant="20" id="Pgi-CO-LdV"/>
+                                    <constraint firstAttribute="height" constant="80" id="Rh2-5Z-Z5v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
-                                <state key="normal" title="REQUEST RIDE">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99x-QJ-Nzy">
                                 <rect key="frame" x="299" y="519" width="60" height="60"/>
                                 <constraints>
@@ -84,7 +105,7 @@
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0L-g5-JrM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0L-g5-JrM" customClass="RoundedShadowView" customModule="HitchHiker" customModuleProvider="target">
                                 <rect key="frame" x="16" y="91" width="343" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-hm-Cgw">
@@ -93,13 +114,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1hJ-w8-2Of">
                                                 <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1h-fe-XwN">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1h-fe-XwN" customClass="CircleView" customModule="HitchHiker" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="15" height="15"/>
                                                         <color key="backgroundColor" red="0.31372549020000001" green="0.82352941180000006" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="1R8-Eg-pb4"/>
                                                             <constraint firstAttribute="width" constant="15" id="TIn-2X-p0Q"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.054901960784313725" green="0.46274509803921571" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwU-U3-OAL">
                                                         <rect key="frame" x="25" y="1.5" width="278" height="22"/>
@@ -122,13 +148,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5eh-tk-Chh">
                                                 <rect key="frame" x="0.0" y="36" width="303" height="25"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owd-SB-1PU">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owd-SB-1PU" customClass="CircleView" customModule="HitchHiker" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="15" height="15"/>
                                                         <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="NI3-Gu-Dlf"/>
                                                             <constraint firstAttribute="width" constant="15" id="ZD9-hz-LPi"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C7-52-xQh">
                                                         <rect key="frame" x="25" y="1.5" width="278" height="22"/>
@@ -152,27 +183,39 @@
                                     <constraint firstItem="PKg-hm-Cgw" firstAttribute="top" secondItem="r0L-g5-JrM" secondAttribute="top" constant="9.5" id="ngS-wO-MPb"/>
                                     <constraint firstAttribute="trailing" secondItem="PKg-hm-Cgw" secondAttribute="trailing" constant="20" id="v0Y-L8-eTK"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p4U-7v-85f" secondAttribute="trailing" constant="-50" id="0Ux-PV-qnN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hNG-4n-G9H" secondAttribute="bottom" id="8CB-v1-6wX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tGt-Bs-5nL" secondAttribute="trailing" id="9ch-s8-Tyy"/>
                             <constraint firstItem="tGt-Bs-5nL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EWm-cn-qC3"/>
                             <constraint firstItem="r0L-g5-JrM" firstAttribute="top" secondItem="tGt-Bs-5nL" secondAttribute="bottom" constant="16" id="GOl-ef-Vmv"/>
                             <constraint firstItem="SBD-xl-tmA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GZ4-gS-pI1"/>
                             <constraint firstItem="r0L-g5-JrM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K3l-iE-1YI"/>
+                            <constraint firstAttribute="trailing" secondItem="hNG-4n-G9H" secondAttribute="trailing" id="Pqi-0K-2c2"/>
                             <constraint firstItem="99x-QJ-Nzy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pv3-td-aFc"/>
                             <constraint firstItem="SBD-xl-tmA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SlA-uq-jct"/>
-                            <constraint firstItem="K0X-Rw-4r8" firstAttribute="top" secondItem="99x-QJ-Nzy" secondAttribute="bottom" constant="8" id="VY1-Xo-NXX"/>
-                            <constraint firstItem="K0X-Rw-4r8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fo9-ss-7yB"/>
+                            <constraint firstItem="hNG-4n-G9H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T1k-sZ-GJ4"/>
+                            <constraint firstItem="hNG-4n-G9H" firstAttribute="top" secondItem="99x-QJ-Nzy" secondAttribute="bottom" constant="8" id="cPc-yS-YDF"/>
                             <constraint firstItem="tGt-Bs-5nL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="jd9-a4-NXa"/>
+                            <constraint firstItem="p4U-7v-85f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mhK-pi-AXI"/>
+                            <constraint firstItem="p4U-7v-85f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oJg-LJ-B2M"/>
                             <constraint firstItem="r0L-g5-JrM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rZU-nQ-1jO"/>
-                            <constraint firstItem="K0X-Rw-4r8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tqD-I3-XLm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SBD-xl-tmA" secondAttribute="bottom" id="uQg-TP-JIS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K0X-Rw-4r8" secondAttribute="bottom" constant="20" id="uyX-Nv-EFD"/>
                             <constraint firstAttribute="trailing" secondItem="SBD-xl-tmA" secondAttribute="trailing" id="zdo-ly-dCw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="K0X-Rw-4r8" id="2VA-NO-izO"/>
+                        <outlet property="mapView" destination="SBD-xl-tmA" id="ESc-xL-P0o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,5 +225,6 @@
     <resources>
         <image name="centerMapBtn" width="62" height="62"/>
         <image name="menuSliderBtn" width="30" height="24"/>
+        <image name="sample-photo" width="320" height="320"/>
     </resources>
 </document>

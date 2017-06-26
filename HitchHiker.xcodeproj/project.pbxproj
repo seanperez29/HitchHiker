@@ -13,6 +13,12 @@
 		913D4EFB1F0094AB00A78FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EF91F0094AB00A78FDA /* Main.storyboard */; };
 		913D4EFD1F0094AB00A78FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EFC1F0094AB00A78FDA /* Assets.xcassets */; };
 		913D4F001F0094AB00A78FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D4EFE1F0094AB00A78FDA /* LaunchScreen.storyboard */; };
+		91C7F3FA1F016D5400F3C53C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C7F3F91F016D5400F3C53C /* MapKit.framework */; };
+		91C7F3FF1F016DC800F3C53C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F3FE1F016DC800F3C53C /* GradientView.swift */; };
+		91C7F4011F01729600F3C53C /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4001F01729600F3C53C /* RoundImageView.swift */; };
+		91C7F4031F0173EB00F3C53C /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4021F0173EB00F3C53C /* RoundedShadowView.swift */; };
+		91C7F4051F0174EE00F3C53C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4041F0174EE00F3C53C /* CircleView.swift */; };
+		91C7F4071F019FEE00F3C53C /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C7F4061F019FEE00F3C53C /* RoundedShadowButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		913D4EFC1F0094AB00A78FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913D4EFF1F0094AB00A78FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		913D4F011F0094AB00A78FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C7F3F91F016D5400F3C53C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		91C7F3FE1F016DC800F3C53C /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		91C7F4001F01729600F3C53C /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		91C7F4021F0173EB00F3C53C /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		91C7F4041F0174EE00F3C53C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		91C7F4061F019FEE00F3C53C /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C7F3FA1F016D5400F3C53C /* MapKit.framework in Frameworks */,
 				5D40E7E7D9B928E1731A7995 /* Pods_HitchHiker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +56,7 @@
 		701A08EFFFCC4E5A10E3C5AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91C7F3F91F016D5400F3C53C /* MapKit.framework */,
 				2BA68243E9D23A54B85F2FC6 /* Pods_HitchHiker.framework */,
 			);
 			name = Frameworks;
@@ -69,14 +83,43 @@
 		913D4EF41F0094AA00A78FDA /* HitchHiker */ = {
 			isa = PBXGroup;
 			children = (
+				91C7F3FD1F016DA900F3C53C /* Model */,
+				91C7F3FC1F016DA500F3C53C /* View */,
+				91C7F3FB1F016D9E00F3C53C /* Controller */,
 				913D4EF51F0094AB00A78FDA /* AppDelegate.swift */,
-				913D4EF71F0094AB00A78FDA /* ViewController.swift */,
-				913D4EF91F0094AB00A78FDA /* Main.storyboard */,
 				913D4EFC1F0094AB00A78FDA /* Assets.xcassets */,
-				913D4EFE1F0094AB00A78FDA /* LaunchScreen.storyboard */,
 				913D4F011F0094AB00A78FDA /* Info.plist */,
 			);
 			path = HitchHiker;
+			sourceTree = "<group>";
+		};
+		91C7F3FB1F016D9E00F3C53C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				913D4EF71F0094AB00A78FDA /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		91C7F3FC1F016DA500F3C53C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				913D4EF91F0094AB00A78FDA /* Main.storyboard */,
+				913D4EFE1F0094AB00A78FDA /* LaunchScreen.storyboard */,
+				91C7F3FE1F016DC800F3C53C /* GradientView.swift */,
+				91C7F4001F01729600F3C53C /* RoundImageView.swift */,
+				91C7F4021F0173EB00F3C53C /* RoundedShadowView.swift */,
+				91C7F4041F0174EE00F3C53C /* CircleView.swift */,
+				91C7F4061F019FEE00F3C53C /* RoundedShadowButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		91C7F3FD1F016DA900F3C53C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		EF17B6B5F742828FFFF9A0A2 /* Pods */ = {
@@ -125,6 +168,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PW5CGBBSUC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,8 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C7F4071F019FEE00F3C53C /* RoundedShadowButton.swift in Sources */,
+				91C7F4051F0174EE00F3C53C /* CircleView.swift in Sources */,
 				913D4EF81F0094AB00A78FDA /* ViewController.swift in Sources */,
+				91C7F4011F01729600F3C53C /* RoundImageView.swift in Sources */,
+				91C7F4031F0173EB00F3C53C /* RoundedShadowView.swift in Sources */,
 				913D4EF61F0094AB00A78FDA /* AppDelegate.swift in Sources */,
+				91C7F3FF1F016DC800F3C53C /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +434,7 @@
 				913D4F061F0094AB00A78FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
